@@ -1,0 +1,15 @@
+import { Get, Param } from '@nestjs/common';
+import { AccountAbtService } from '../../application/services/AccountAbtService';
+import { AccountAbtDto } from '../persistence/dtos/AccountAbtDto';
+
+export class AccountAbtController {
+  constructor(private readonly accountAbtService: AccountAbtService) {}
+
+  @Get(':documentId')
+  async getAccountAbt(
+    @Param('documentId') documentId: string,
+  ): Promise<AccountAbtDto | null> {
+    const result = await this.accountAbtService.getAccountAbtByDocumentId(documentId);
+    return null;
+  }
+}
