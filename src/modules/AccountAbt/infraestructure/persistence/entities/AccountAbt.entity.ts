@@ -1,7 +1,10 @@
-import { Column, Entity, Table } from 'typeorm';
+import { Column, Entity, PrimaryColumn, Table } from 'typeorm';
 
 @Entity({ name: 'account_abt' })
 export class AccountAbtEntity {
+  @PrimaryColumn({ name: 'ID' })
+  id: number;
+
   @Column({ name: 'ACCOUNTABT_ID' })
   accountAbtId: string;
 

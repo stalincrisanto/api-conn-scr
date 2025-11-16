@@ -1,7 +1,9 @@
-import { Get, Param } from '@nestjs/common';
+import { Controller, Get, Param } from '@nestjs/common';
 import { AccountAbtService } from '../../application/services/AccountAbtService';
 import { AccountAbtDto } from '../persistence/dtos/AccountAbtDto';
+import { AccountAbtMapper } from '../persistence/mapper/AccountAbtMapper';
 
+@Controller("account-abt")
 export class AccountAbtController {
   constructor(private readonly accountAbtService: AccountAbtService) {}
 
@@ -9,7 +11,8 @@ export class AccountAbtController {
   async getAccountAbt(
     @Param('documentId') documentId: string,
   ): Promise<AccountAbtDto | null> {
-    const result = await this.accountAbtService.getAccountAbtByDocumentId(documentId);
-    return null;
+    const entityData = await this.accountAbtService.getAccountAbtByDocumentId(documentId);
+    const result = AccountAbtMapper.toDto(entityData);
+    return result;
   }
 }
