@@ -1,7 +1,7 @@
 import { AccountAbt } from 'src/modules/AccountAbt/domain/AccountAbt';
 import { Primitives } from 'src/shared/domain/Primitives';
 import { AccountAbtEntity } from '../entities/AccountAbt.entity';
-import { AccountAbtDto } from '../dtos/AccountAbtDto';
+import { AccountAbtResponseDto } from '../dtos/AccountAbtResponseDto';
 
 export class AccountAbtMapper {
   static toDomain(entity: AccountAbtEntity): AccountAbt {
@@ -23,8 +23,8 @@ export class AccountAbtMapper {
     return entity;
   };
 
-  static toDto(entity: AccountAbtEntity): AccountAbtDto {
-    const dto: AccountAbtDto = {
+  static toDto(entity: AccountAbtEntity): AccountAbtResponseDto {
+    const dto: AccountAbtResponseDto = {
       fullName: entity.fullName,
       documentId: entity.documentId,
       email: entity.email,
