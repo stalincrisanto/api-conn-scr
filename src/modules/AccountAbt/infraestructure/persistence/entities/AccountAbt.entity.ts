@@ -1,4 +1,4 @@
-import { Column, Entity, PrimaryColumn, Table } from 'typeorm';
+import { Column, Entity, PrimaryColumn } from 'typeorm';
 
 @Entity({ name: 'account_abt' })
 export class AccountAbtEntity {
@@ -16,4 +16,7 @@ export class AccountAbtEntity {
 
   @Column({ name: 'EMAIL' })
   email: string;
+
+  @Column({ name: 'PROFILE' })
+  profile: string;
 }

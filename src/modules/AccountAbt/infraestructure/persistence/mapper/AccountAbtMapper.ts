@@ -11,6 +11,7 @@ export class AccountAbtMapper {
       entity.fullName,
       entity.documentId,
       entity.email,
+      entity.profile
     );
   }
 
