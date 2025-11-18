@@ -1,8 +1,8 @@
 import { Inject, Injectable, NotFoundException } from '@nestjs/common';
-import { AccountAbtRepository } from '../ports/repositories/AccountAbtRepository';
-import { CardAssignmentUseCases } from '../ports/usecases/CardAssignmentUseCases';
-import { AccountAbtMapper } from '../../infraestructure/persistence/mapper/AccountAbtMapper';
-import { AccountAbtResponseDto } from '../../infraestructure/persistence/dtos/AccountAbtResponseDto';
+import { AccountAbtRepository } from '../ports/repositories/account-abt.repository';
+import { CardAssignmentUseCases } from '../ports/usecases/card-assignment.usecases';
+import { AccountAbtMapper } from '../../infraestructure/persistence/mapper/account-abt.mapper';
+import { AccountAbtResponseDto } from '../../infraestructure/persistence/dtos/account-abt-response.dto';
 
 @Injectable()
 export class CardAssignmentService implements CardAssignmentUseCases {

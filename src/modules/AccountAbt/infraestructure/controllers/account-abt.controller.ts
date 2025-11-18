@@ -1,7 +1,7 @@
 import { Controller, Get, Param } from '@nestjs/common';
-import { AccountAbtService } from '../../application/services/AccountAbtService';
-import { AccountAbtResponseDto } from '../persistence/dtos/AccountAbtResponseDto';
-import { AccountAbtMapper } from '../persistence/mapper/AccountAbtMapper';
+import { AccountAbtService } from '../../application/services/account-abt.service';
+import { AccountAbtResponseDto } from '../persistence/dtos/account-abt-response.dto';
+import { AccountAbtMapper } from '../persistence/mapper/account-abt.mapper';
 
 @Controller("account-abt")
 export class AccountAbtController {

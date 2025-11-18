@@ -1,11 +1,11 @@
 import { Module } from '@nestjs/common';
-import { AccountAbtController } from './infraestructure/controllers/AccountAbtController';
-import { AccountAbtService } from './application/services/AccountAbtService';
+import { AccountAbtController } from './infraestructure/controllers/account-abt.controller';
+import { AccountAbtService } from './application/services/account-abt.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { AccountAbtEntity } from './infraestructure/persistence/entities/AccountAbt.entity';
-import { AccountAbtRepositoryImpl } from './infraestructure/persistence/repositories/AccountAbtRepositoryImpl';
-import { CardAssignmentController } from './infraestructure/controllers/CardAssignmentController';
-import { CardAssignmentService } from './application/services/CardAssignmentService';
+import { AccountAbtEntity } from './infraestructure/persistence/entities/account-abt.entity';
+import { AccountAbtRepositoryImpl } from './infraestructure/persistence/repositories/account-abt.repositoryimpl';
+import { CardAssignmentController } from './infraestructure/controllers/card-assignment.controller';
+import { CardAssignmentService } from './application/services/card-assignment.service';
 
 @Module({
   imports: [TypeOrmModule.forFeature([AccountAbtEntity])],

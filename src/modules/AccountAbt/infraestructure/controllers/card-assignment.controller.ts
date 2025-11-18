@@ -6,9 +6,9 @@ import {
   UsePipes,
   ValidationPipe,
 } from '@nestjs/common';
-import { CardAssignmentService } from '../../application/services/CardAssignmentService';
-import { CardAssignmentQueryDto } from '../persistence/dtos/CardAssignmentQueryDto';
-import { AccountAbtResponseDto } from '../persistence/dtos/AccountAbtResponseDto';
+import { CardAssignmentService } from '../../application/services/card-assignment.service';
+import { CardAssignmentQueryDto } from '../persistence/dtos/card-assignment-query.dto';
+import { AccountAbtResponseDto } from '../persistence/dtos/account-abt-response.dto';
 
 @Controller('/card-assignment')
 export class CardAssignmentController {

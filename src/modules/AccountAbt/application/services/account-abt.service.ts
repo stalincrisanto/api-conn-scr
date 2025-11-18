@@ -1,7 +1,7 @@
 import { Inject, Injectable, NotFoundException } from '@nestjs/common';
-import { AccountAbt } from '../../domain/AccountAbt';
-import { AccountAbtRepository } from '../ports/repositories/AccountAbtRepository';
-import { AccountAbtUseCases } from '../ports/usecases/AccountAbtUseCases';
+import { AccountAbt } from '../../domain/account-abt';
+import { AccountAbtRepository } from '../ports/repositories/account-abt.repository';
+import { AccountAbtUseCases } from '../ports/usecases/account-abt.usecases';
 
 @Injectable()
 export class AccountAbtService implements AccountAbtUseCases {

@@ -1,4 +1,4 @@
-import { AccountAbtRequestDto } from 'src/modules/AccountAbt/infraestructure/persistence/dtos/AccountAbtRequestDto';
+import { AccountAbtRequestDto } from 'src/modules/AccountAbt/infraestructure/persistence/dtos/account-abt-request.dto';
 
 export interface CardAssignmentUseCases {
   getCardAssignmentInfo(

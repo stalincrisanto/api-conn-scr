@@ -1,7 +1,7 @@
-import { AccountAbt } from 'src/modules/AccountAbt/domain/AccountAbt';
+import { AccountAbt } from 'src/modules/AccountAbt/domain/account-abt';
 import { Primitives } from 'src/shared/domain/Primitives';
-import { AccountAbtEntity } from '../entities/AccountAbt.entity';
-import { AccountAbtResponseDto } from '../dtos/AccountAbtResponseDto';
+import { AccountAbtEntity } from '../entities/account-abt.entity';
+import { AccountAbtResponseDto } from '../dtos/account-abt-response.dto';
 
 export class AccountAbtMapper {
   static toDomain(entity: AccountAbtEntity): AccountAbt {
